@@ -26,6 +26,16 @@ public class TypesVariablesSyntaxNotes {
         System.out.println(message);
         System.out.println(quote);
 
-        final String STUDENT_OF_IMUGI = "Seth \"star Student\" Crist";
+        final String STUDENT_OF_IMUGI = "Seth \"star Student\" Crist"; //final is like using constant in JS
+
+        byte tinyNum = 22;
+        short stillSmallNum = (short) (tinyNum + 3); //casting
+        System.out.println(stillSmallNum); // 25
+
+        float almostPi = 3.14F; //F to make it a float
+        int almostAlmostPie = (int) almostPi;
+        System.out.println(almostPi);
+
+        long bigNum = 200L; // L to make it a long
     }
 }
