@@ -65,15 +65,25 @@ public class ConsoleExercises {
 
         System.out.printf("The words you entered are as followed: %s, %s, %s %n", firstWord, secondWord, thirdWord);
 
+// How david did it: -------------------------------------------------
+        System.out.println("enter in 3 words: ");
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+
+        System.out.printf("word 1: %s%n", word1);
+        System.out.printf("word 2: %s%n", word2);
+        System.out.printf("word 3: %s%n", word3);
+
 // to reset the scanner use:
         scanner.nextLine();
 
 // Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user
         System.out.println("Provide a sentence: ");
+        scanner.nextLine();
         String sentence = scanner.nextLine();
-        System.out.println(sentence);
-
-        System.out.printf("Your provided sentence was: %s", sentence);
+        System.out.println("your story: \"" + sentence + "\""); // either will work
+//        System.out.printf("Your provided sentence was: %s", sentence);
 
 // reset the scanner
         scanner.nextLine();
@@ -82,6 +92,12 @@ public class ConsoleExercises {
 // use the nextLine method each time you need to get user input. we need it twice, once to get the user input for the length and again to get the user input for the width.
 // Parse the resulting strings to a numeric type.
 
+        System.out.print("what is the length of your room");
+        int length = Integer.parseInt(scanner.nextLine());
+        System.out.print("what is the width of your room");
+        int width = Integer.parseInt(scanner.nextLine());
+
+        System.out.printf("The length of the room is %d.%nThe width of the room is %d.%nThe perimeter of the room is %d.%nThe area of the room is %d.%n", length, width, (2 * length) + (2 * width), length * width);
 
     }
 }
