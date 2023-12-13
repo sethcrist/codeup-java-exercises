@@ -33,7 +33,7 @@ public class HelloWorld {
 
 // Change your code to declare myNumber as a float. Assign the value 3.14 to it. What happens?
     float myNumber = 3.14F; // add the F @ the end and then no issue or you could cast, (float) 3.14
-        System.out.println(myFloatNumber);
+        System.out.println(myNumber);
 
 // Copy and paste the following code blocks one at a time and execute them
 //      int x = 5;
