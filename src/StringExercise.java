@@ -33,14 +33,22 @@ public class StringExercise {
 //      you can do this with only one String variable and one print statement for each output example
 //          "We don't need no education"
 //          "We don't need no thought control"
+                String education = "We don't need no education\n" +
+                        "We don't need no thought control";
+                System.out.println(education);
 
 
 //          "Check "this" out!, "s inside of "s!"
-
+                String check = "Check \"this\" out!, \"s inside of \"s!";
+                System.out.println(check);
 
 //          "In windows, the main drive is usually C:\"
-
+                String windows = "In windows, the main drive is usually C:\\";
+                System.out.println(windows);
 
 //          "I can do backslashes \, double backslashes \\, and the amazing triple backslash \\\!"
+                String backSlash = "I can do backslashes \\, double backslashes \\\\,\n" +
+                        "and the amazing triple backslash \\\\\\!";
+                System.out.println(backSlash);
     }
 }
