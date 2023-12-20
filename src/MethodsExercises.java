@@ -66,7 +66,7 @@ public class MethodsExercises {
 
 //------------asking the user for a number between 1 & 15
         //System.out.println("Enter a number between 1 and 15");
-        //int userInput = getInteger(1, 15);
+        int userInput = getInteger(1, 15);
         //System.out.println("You entered: " + userInput);
 
 //------------Calculate the factorial of a number.
@@ -109,20 +109,19 @@ public class MethodsExercises {
 //  2.  Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range.
 //      If not, prompt the user to input their number again until the input is within range
 
-    //public static int getInteger(int min, int max) {
-        //Scanner scanner = new Scanner(System.in);
-        //while (!scanner.hasNextInt()) {
-            //System.out.println("Invalid input. Please enter a valid integer.");
-            //scanner.next(); // Consume the invalid input
-        //}
-
-        //int userInput = scanner.nextInt();
-        //if (userInput < min || userInput > max) {
-            //System.out.println("your input is not between 1 and 15, choose another number between " + min + " and " + max + ".");
-            //return getInteger(min, max);
-        //}
-        //return userInput;
-    //}
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input. Please enter a valid integer.");
+            scanner.next(); // Consume the invalid input
+        }
+        int userInput = scanner.nextInt();
+        if (userInput < min || userInput > max) {
+            System.out.println("your input is not between 1 and 15, choose another number between " + min + " and " + max + ".");
+            return getInteger(min, max);
+        }
+        return userInput;
+    }
 
 //  3.  Calculate the factorial of a number by Prompting the user to enter a number from 1 to 10
 //        public static long calculateFactorial (int num) {
@@ -136,24 +135,24 @@ public class MethodsExercises {
 //            return userNumber;
 //        }
 //------------using recursion--------
-    //public static long calculateFactorial (int num) {
-        //Scanner scanner = new Scanner(System.in);
-        //if (num == 1) return 1;
-        //return calculateFactorial(num - 1) * num;
-    //}
+    public static long calculateFactorial (int num) {
+        Scanner scanner = new Scanner(System.in);
+        if (num == 1) return 1;
+        return calculateFactorial(num - 1) * num;
+    }
 
-    //public static void promptFactorial() {
-        //Scanner scanner = new Scanner(System.in);
-        //String continueMessage;
-        //System.out.println("welcome to the factorial zone!");
-        //do {
-            //System.out.println("what number should we calculate?");
-            //int userInt = getInteger(1, 10);
-            //System.out.println("the factorial of " + userInt + " is: " + calculateFactorial(userInt) + ".");
-            //System.out.println("would you like to enter another number? [y/n]");
-            //continueMessage = scanner.nextLine();
-        //} while (continueMessage.equalsIgnoreCase("yes"));
-    //}
+    public static void promptFactorial() {
+        Scanner scanner = new Scanner(System.in);
+        String continueMessage;
+        System.out.println("welcome to the factorial zone!");
+        do {
+            System.out.println("what number should we calculate?");
+            int userInt = getInteger(1, 10);
+            System.out.println("the factorial of " + userInt + " is: " + calculateFactorial(userInt) + ".");
+            System.out.println("would you like to enter another number? [y/n]");
+            continueMessage = scanner.nextLine();
+        } while (continueMessage.equalsIgnoreCase("yes"));
+    }
 
 // 4. Create an application that simulates dice rolling by asking the user to enter the number of sides for a pair of dice
 // Prompt the user to roll the dice
@@ -168,15 +167,11 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.println("welcome to the dice roll");
         System.out.println("Enter the number of sides the dice has. (1 - 6)");
-        int numberOfDiceSides = getRandomInt(1, 6);
+        int numberOfDiceSides = getInteger(1, 6);
         System.out.printf("you have rolled %d and a %d", getRandomInt(1, numberOfDiceSides), getRandomInt(1, numberOfDiceSides));
     }
 
-// 5. Create a class named HighLow inside of src that picks a random number between 1 and 100.
-// Prompts user to guess the number.
-// All user inputs are validated.
-// If user's guess is less than the number, it outputs "HIGHER", If user's guess is more than the number, it outputs "LOWER".
-// If a user guesses the number, the game should declare "GOOD GUESS!"
+
 
 
 
